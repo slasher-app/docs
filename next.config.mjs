@@ -2,15 +2,27 @@ import nextra from "nextra";
 
 // Set up Nextra with its configuration
 const withNextra = nextra({
-  contentDirBasePath: "/docs"
+  latex: true,
+  defaultShowCopyCode: true,
+  mdxOptions: {
+    rehypePlugins: [
+      // Provide only on `build` since turbopack on `dev` supports only serializable values
+      process.env.NODE_ENV === "production" && rehypeOpenGraphImage,
+    ].filter((v) => !!v),
+  },
 });
 
 // Export the final Next.js config with Nextra included
 export default withNextra({
   turbopack: {
-    resolveAlias: {
-      // Path to your `mdx-components` file with extension
-      "next-mdx-import-source-file": "./mdx-components.js",
+    rules: {
+      "./components/icons/*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
+      },
     },
+  },
+  experimental: {
+    optimizePackageImports: ["@components/icons"],
   },
 });

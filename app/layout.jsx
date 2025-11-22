@@ -1,48 +1,84 @@
-import { Layout, Navbar } from "nextra-theme-docs"
+import { Layout, Navbar, Footer } from "nextra-theme-docs"
 import { Head } from "nextra/components"
 import { getPageMap } from "nextra/page-map"
 import "nextra-theme-docs/style.css"
+import "./globals.css"
+import Image from "next/image"
 
 export const metadata = {
-  // Define your metadata here
-  // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+  description: 'A powerful web extension that lets you create custom slash commands to insert text snippets on any website. Type / to instantly insert emails, addresses, code snippets, and more.',
+  metadataBase: new URL('https://slasher-app.com'),
+  keywords: ["slash commands", "web extension", "productivity", "browser extension", "text snippets", "chrome extension", "text expansion"],
+  generator: 'Next.js',
+  applicationName: 'Slasher',
+  appleWebApp: {
+    title: 'Slasher'
+  },
+  title: {
+    default: 'Slasher - Slash Commands Everywhere!',
+    template: '%s | Nextra'
+  },
+  openGraph: {
+    url: './',
+    siteName: 'Slasher',
+    locale: 'en_US',
+    type: 'website'
+  },
+  other: {
+    'msapplication-TileColor': '#fff'
+  },
+  alternates: {
+    canonical: './'
+  }
 }
 
 const navbar = (
   <Navbar
     logo={
-        <>
-          <img src="/slasher-icon.png" alt="Slasher" style={{ height: "50px" }} />
-          <span style={{ fontSize: "1.5em", marginLeft: ".5em", fontWeight: 800, fontStyle: "italic" }}>
-            Slasher
-          </span>
-        </>
+      <div className="flex items-center gap-2">
+        <Image
+          src="/slasher-icon.png"
+          alt="Slasher"
+          width={40}
+          height={40}
+        />
+        <span className="font-bold text-lg">Slasher</span>
+      </div>
     }
-    projectLink="test"
+    projectLink="https://github.com/slasher-app/slasher"
   />
+)
+
+const footer = (
+  <Footer className="flex-col items-center md:items-start">
+    <p className="mt-6 text-xs">
+      {new Date().getFullYear()} | Slasher
+    </p>
+  </Footer>
 )
 
 export default async function RootLayout({ children }) {
   return (
-    <html
-      // Not required, but good for SEO
-      lang="en"
-      // Required to be set
-      dir="ltr"
-      // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
-      suppressHydrationWarning
-    >
-      <Head
-      // ... Your additional head options
-      >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
+    <html lang="en" dir="ltr" suppressHydrationWarning>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <body>
+      <body className="antialiased">
         <Layout
           navbar={navbar}
+          footer={footer}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/slasher-app/docs/tree/main"
-          // ... Your additional layout options
+          docsRepositoryBase="https://github.com/slasher-app/slasher"
+          sidebar={{
+            defaultMenuCollapseLevel: 1,
+            toggleButton: true
+          }}
+          toc={{
+            float: true,
+            title: 'On This Page',
+            extraContent: null,
+            backToTop: true
+          }}
         >
           {children}
         </Layout>
