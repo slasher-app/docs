@@ -1,0 +1,75 @@
+---
+title: Using Variables
+description: Create dynamic slash commands with variables in Slasher
+---
+
+# Using Variables
+
+Make your slash commands dynamic and powerful with variables.
+
+## What Are Variables?
+
+Variables allow you to create slash commands with placeholders that you can fill in when you use them. Instead of static text, you can prompt for input each time you use the command.
+
+## Basic Variable Syntax
+
+Variables are defined using double curly braces: `{{variable_name}}`
+
+### Example
+
+```
+Trigger:  /greeting
+Content:  Hello {{name}}, welcome to {{company}}!
+```
+
+When you use `/greeting`, Slasher will prompt you to fill in:
+1. `name` - The person's name
+2. `company` - The company name
+
+Result: `Hello John, welcome to Acme Corp!`
+
+## Creating Commands with Variables
+
+### Step 1: Add Variable Placeholders
+
+When creating your command, include variables in the content:
+
+```
+/email-template → Hi {{recipient}},
+
+I hope this email finds you well. I wanted to reach out regarding {{topic}}.
+
+Best regards,
+{{sender}}
+```
+
+### Step 2: Use the Command
+
+When you type `/email-template`, Slasher will:
+1. Show a dialog with input fields for each variable
+2. Wait for you to fill them in
+3. Insert the complete text with your values
+
+## Variable Examples
+
+### Meeting Request
+
+```
+/meeting → Hi {{name}},
+
+Would you be available for a {{duration}} meeting on {{date}} at {{time}} to discuss {{topic}}?
+
+Let me know if that works for you!
+```
+
+### Code Comment
+
+```
+/comment → /**
+ * {{description}}
+ * 
+ * @param {{param1}} - {{param1_desc}}
+ * @param {{param2}} - {{param2_desc}}
+ * @returns {{return_desc}}
+ */
+```
