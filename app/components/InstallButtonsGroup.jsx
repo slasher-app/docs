@@ -111,7 +111,7 @@ export default function InstallButtonsGroup() {
 
         {/* Button */}
         <button
-          className={`relative px-8 py-4 rounded-xl bg-white dark:bg-zinc-900/90 text-gray-900 dark:text-white font-semibold transition-all shadow-lg dark:shadow-2xl flex items-center gap-3 group-hover:scale-[1.02] active:scale-[0.98] overflow-hidden`}
+          className={`cursor-pointer relative px-8 py-4 rounded-xl bg-white dark:bg-zinc-900/90 text-gray-900 dark:text-white font-semibold transition-all shadow-lg dark:shadow-2xl flex items-center gap-3 group-hover:scale-[1.02] active:scale-[0.98] overflow-hidden`}
         >
           {/* Subtle gradient background tint */}
           <div className={`absolute inset-0 bg-gradient-to-r ${browser.bgTint} rounded-xl opacity-0 dark:opacity-100`}></div>
@@ -160,7 +160,7 @@ export default function InstallButtonsGroup() {
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setDropdownOpen(!dropdownOpen)}
-          className={`relative h-full px-4 rounded-xl bg-white dark:bg-zinc-900/80 backdrop-blur-sm text-gray-600 dark:text-zinc-300 font-semibold hover:text-gray-900 dark:hover:text-white transition-all border border-gray-200 dark:border-zinc-800 hover:border-gray-300 dark:hover:border-zinc-700 shadow-md dark:shadow-none flex items-center justify-center group ${dropdownOpen ? 'bg-gray-50 dark:bg-zinc-700/80 border-gray-300 dark:border-zinc-600 shadow-sm' : ''}`}
+          className={`cursor-pointer relative h-full px-4 rounded-xl bg-white dark:bg-zinc-900/80 backdrop-blur-sm text-gray-600 dark:text-zinc-300 font-semibold hover:text-gray-900 dark:hover:text-white transition-all border border-gray-200 dark:border-zinc-800 hover:border-gray-300 dark:hover:border-zinc-700 shadow-md dark:shadow-none flex items-center justify-center group ${dropdownOpen ? 'bg-gray-50 dark:bg-zinc-700/80 border-gray-300 dark:border-zinc-600 shadow-sm' : ''}`}
         >
           {/* Subtle glow on hover */}
           <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-300/20 dark:from-zinc-500/20 to-gray-200/20 dark:to-zinc-400/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 dark:group-hover:opacity-100 transition duration-300"></div>
