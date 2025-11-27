@@ -3,7 +3,6 @@ import { Head } from "nextra/components"
 import { getPageMap } from "nextra/page-map"
 import "nextra-theme-docs/style.css"
 import "./globals.css"
-import Image from "next/image"
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
