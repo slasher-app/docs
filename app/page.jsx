@@ -141,7 +141,7 @@ export default function Page() {
               {features.map((feature, index) => (
                 <div
                   key={feature.title}
-                  className="bg-white/80 dark:bg-zinc-900/50 backdrop-blur-sm border border-gray-300 dark:border-zinc-800 rounded-2xl p-6 hover:border-red-500/50 transition-all hover:scale-105 cursor-pointer"
+                  className="bg-white/80 dark:bg-zinc-900/50 backdrop-blur-sm border border-gray-300 dark:border-zinc-800 rounded-2xl p-6 hover:border-red-500/50 transition-all hover:scale-105"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="text-4xl mb-4">{feature.icon}</div>
