@@ -13,8 +13,8 @@ export default {
       guide: {
         title: 'Guide',
         items: {
-          variables: {
-            title: 'Using Variables'
+          "first-slash-command": {
+            title: 'Your First Slash Command'
           }
         }
       }
