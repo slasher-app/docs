@@ -4,12 +4,6 @@ import nextra from "nextra";
 const withNextra = nextra({
   latex: true,
   defaultShowCopyCode: true,
-  mdxOptions: {
-    rehypePlugins: [
-      // Provide only on `build` since turbopack on `dev` supports only serializable values
-      process.env.NODE_ENV === "production" && rehypeOpenGraphImage,
-    ].filter((v) => !!v),
-  },
 });
 
 // Export the final Next.js config with Nextra included
