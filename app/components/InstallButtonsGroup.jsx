@@ -198,7 +198,7 @@ export default function InstallButtonsGroup() {
                   <div className={`absolute inset-0 bg-gradient-to-r ${otherBrowser.color} rounded-lg opacity-0 group-hover:opacity-8 dark:group-hover:opacity-10 transition duration-200`}></div>
 
                   {/* Browser Icon */}
-                  <Image
+                  <img
                     src={otherBrowser.icon}
                     alt={`${otherBrowser.name} icon`}
                     width={28}
