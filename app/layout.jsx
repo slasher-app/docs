@@ -5,9 +5,11 @@ import "nextra-theme-docs/style.css"
 import "./globals.css"
 import Image from "next/image"
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const metadata = {
   description: 'A powerful web extension that lets you create custom slash commands to insert text snippets on any website. Type / to instantly insert emails, addresses, code snippets, and more.',
-  metadataBase: new URL('https://slasher-app.com'),
+  metadataBase: new URL('https://slasher-app.github.io/docs/'),
   keywords: ["slash commands", "web extension", "productivity", "browser extension", "text snippets", "chrome extension", "text expansion"],
   generator: 'Next.js',
   applicationName: 'Slasher',
@@ -37,7 +39,7 @@ const navbar = (
     logo={
       <div className="flex items-center gap-2">
         <Image
-          src="/docs/slasher-icon.png"
+          src={`${basePath}/docs/slasher-icon.png`}
           alt="Slasher"
           width={40}
           height={40}
