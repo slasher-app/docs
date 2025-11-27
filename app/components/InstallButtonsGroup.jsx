@@ -16,7 +16,7 @@ export default function InstallButtonsGroup() {
     const allBrowsers = [
       {
         name: 'Chrome',
-        icon: '/chrome.png',
+        icon: '/docs/chrome.png',
         url: '#', // Replace with actual Chrome store URL
         color: 'from-red-600 to-orange-600',
         hoverColor: 'from-red-500 to-orange-500',
@@ -26,7 +26,7 @@ export default function InstallButtonsGroup() {
       },
       {
         name: 'Firefox',
-        icon: '/firefox.png',
+        icon: '/docs/firefox.png',
         url: '#', // Replace with actual Firefox store URL
         color: 'from-orange-600 via-red-600 to-pink-600',
         hoverColor: 'from-orange-500 via-red-500 to-pink-500',
@@ -36,7 +36,7 @@ export default function InstallButtonsGroup() {
       },
       {
         name: 'Edge',
-        icon: '/edge.png',
+        icon: '/docs/edge.png',
         url: '#', // Replace with actual Edge store URL
         color: 'from-blue-600 to-cyan-600',
         hoverColor: 'from-blue-500 to-cyan-500',
