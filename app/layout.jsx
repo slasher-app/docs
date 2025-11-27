@@ -38,7 +38,7 @@ const navbar = (
     logo={
       <div className="flex items-center gap-2">
         <img
-          src={`${basePath}/docs/slasher-icon.png`}
+          src={`${basePath}/slasher-icon.png`}
           alt="Slasher"
           width={40}
           height={40}
