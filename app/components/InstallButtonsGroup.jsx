@@ -3,6 +3,8 @@
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function InstallButtonsGroup() {
   const [browser, setBrowser] = useState(null);
   const [otherBrowsers, setOtherBrowsers] = useState([]);
@@ -16,7 +18,7 @@ export default function InstallButtonsGroup() {
     const allBrowsers = [
       {
         name: 'Chrome',
-        icon: '/docs/chrome.png',
+        icon: `${basePath}/chrome.png`,
         url: '#', // Replace with actual Chrome store URL
         color: 'from-red-600 to-orange-600',
         hoverColor: 'from-red-500 to-orange-500',
@@ -26,7 +28,7 @@ export default function InstallButtonsGroup() {
       },
       {
         name: 'Firefox',
-        icon: '/docs/firefox.png',
+        icon: `${basePath}/firefox.png`,
         url: '#', // Replace with actual Firefox store URL
         color: 'from-orange-600 via-red-600 to-pink-600',
         hoverColor: 'from-orange-500 via-red-500 to-pink-500',
@@ -36,7 +38,7 @@ export default function InstallButtonsGroup() {
       },
       {
         name: 'Edge',
-        icon: '/docs/edge.png',
+        icon: `${basePath}/edge.png`,
         url: '#', // Replace with actual Edge store URL
         color: 'from-blue-600 to-cyan-600',
         hoverColor: 'from-blue-500 to-cyan-500',
