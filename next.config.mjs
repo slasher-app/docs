@@ -10,7 +10,6 @@ const withNextra = nextra({
 export default withNextra({
   output: "export",
   basePath: "/docs",
-  assetPrefix: "/docs/",
   turbopack: {
     rules: {
       "./components/icons/*.svg": {
