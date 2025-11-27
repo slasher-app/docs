@@ -19,6 +19,7 @@ export default function InstallButtonsGroup() {
       {
         name: 'Chrome',
         icon: `${basePath}/chrome.png`,
+        unoptimized: true,
         url: '#', // Replace with actual Chrome store URL
         color: 'from-red-600 to-orange-600',
         hoverColor: 'from-red-500 to-orange-500',
