@@ -23,3 +23,5 @@ _pagefind/
 *.njsproj
 *.sln
 *.sw?
+
+out/*
