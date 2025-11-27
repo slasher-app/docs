@@ -40,24 +40,26 @@ export default function Page() {
         <div className="container mx-auto px-6 pt-20 pb-32">
           <div className="max-w-7xl mx-auto">
             {/* Announcement Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-300 dark:border-zinc-700 bg-white/80 dark:bg-zinc-900/50 backdrop-blur-sm mb-8 hover:border-red-500/50 transition-colors cursor-pointer group">
-              <span className="text-sm text-gray-700 dark:text-zinc-300">
-                🚀 Slasher is currently in Alpha - There might be bugs!
-              </span>
-              <svg
-                className="w-4 h-4 text-gray-500 dark:text-zinc-400 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </div>
+            <a href="http://github.com/slasher-app/slasher">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-300 dark:border-zinc-700 bg-white/80 dark:bg-zinc-900/50 backdrop-blur-sm mb-8 hover:border-red-500/50 transition-colors cursor-pointer group">
+                <span className="text-sm text-gray-700 dark:text-zinc-300">
+                  🚀 Slasher is currently in Alpha - There might be bugs!
+                </span>
+                <svg
+                  className="w-4 h-4 text-gray-500 dark:text-zinc-400 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </a>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Column - Text Content */}
