@@ -127,8 +127,8 @@ export default function InstallButtonsGroup() {
           <div className={`absolute inset-0 bg-gradient-to-r ${browser.color} opacity-0 group-hover:opacity-10 dark:group-hover:opacity-15 rounded-xl transition-opacity duration-300`}></div>
           {/* Browser Icon */}
           <div className="relative z-10">
-            <Image
-              src={browser.icon}
+            <img
+              src={`${basePath}${browser.icon}`}
               alt={`${browser.name} icon`}
               width={40}
               height={40}
@@ -197,9 +197,8 @@ export default function InstallButtonsGroup() {
                   {/* Subtle glow effect */}
                   <div className={`absolute inset-0 bg-gradient-to-r ${otherBrowser.color} rounded-lg opacity-0 group-hover:opacity-8 dark:group-hover:opacity-10 transition duration-200`}></div>
 
-                  {/* Browser Icon */}
                   <img
-                    src={`${basePath}/${otherBrowser.icon}`}
+                    src={`${basePath}${otherBrowser.icon}`}
                     alt={`${otherBrowser.name} icon`}
                     width={28}
                     height={28}

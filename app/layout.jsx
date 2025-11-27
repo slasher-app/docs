@@ -17,7 +17,7 @@ export const metadata = {
   },
   title: {
     default: 'Slasher - Slash Commands Everywhere!',
-    template: '%s | Nextra'
+    template: '%s | Slasher'
   },
   openGraph: {
     url: './',
