@@ -29,7 +29,7 @@ export default function InstallButtonsGroup() {
       {
         name: 'Firefox',
         icon: '/firefox.png',
-        url: '#', // Replace with actual Firefox store URL
+        url: 'https://addons.mozilla.org/en-US/firefox/addon/slasher-app/',
         color: 'from-orange-600 via-red-600 to-pink-600',
         hoverColor: 'from-orange-500 via-red-500 to-pink-500',
         glowColor: 'bg-orange-500',
@@ -102,6 +102,8 @@ export default function InstallButtonsGroup() {
     <div className="flex items-stretch gap-2">
       {/* Main Install Button */}
       <a
+        target="_blank"
+        rel="noopener noreferrer"
         href={browser.url}
         className="group relative inline-block"
       >
@@ -191,6 +193,8 @@ export default function InstallButtonsGroup() {
                 <a
                   key={otherBrowser.name}
                   href={otherBrowser.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-zinc-800/80 transition-all"
                   onMouseDown={(e) => e.preventDefault()}
                 >
